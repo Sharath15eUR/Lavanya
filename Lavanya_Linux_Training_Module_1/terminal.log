@@ -1,0 +1,262 @@
+Script started on 2025-01-25 23:43:53+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="87" LINES="38"]
+[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1[00m$ touch ques1
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1[00m$ chmod a+x ques1
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1[00m$ ls -l
+[?2004ltotal 0
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:42 Q1.txt
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:42 Q2.txt
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:42 Q3.txt
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:42 Q4.txt
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:42 Q5.txt
+-rwxrwxr-x 1 lavs lavs 0 Jan 25 23:43 [0m[01;32mques1[0m
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:43 terminal.log
+[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1[00m$ touch ques2
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1[00m$ chmod g-w g[Kques2
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1[00m$ ls l[K-la
+[?2004ltotal 8
+drwxrwxr-x 2 lavs lavs 4096 Jan 25 23:44 [0m[01;34m.[0m
+drwxrwxr-x 4 lavs lavs 4096 Jan 25 23:42 [01;34m..[0m
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:42 Q1.txt
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:42 Q2.txt
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:42 Q3.txt
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:42 Q4.txt
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:42 Q5.txt
+-rwxrwxr-x 1 lavs lavs    0 Jan 25 23:43 [01;32mques1[0m
+-rw-r--r-- 1 lavs lavs    0 Jan 25 23:44 ques2
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:43 terminal.log
+[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1[00m$ mkdir dir1
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1[00m$ cd dir1/
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ mkdir dir2
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ c [Kd dir2/
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1/dir2[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1/dir2[00m$ echo :[K"q3" > ques3
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1/dir2[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1/dir2[00m$ cd ..
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ ln -s ./dir2/ques3 ques3 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K3
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ ls -l
+[?2004ltotal 4
+drwxrwxr-x 2 lavs lavs 4096 Jan 25 23:44 [0m[01;34mdir2[0m
+lrwxrwxrwx 1 lavs lavs   12 Jan 25 23:44 [01;36mques3[0m -> ./dir2/ques3
+[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ ps ax
+[?2004l    PID TTY      STAT   TIME COMMAND
+      1 ?        Ss     0:01 /sbin/init splash
+      2 ?        S      0:00 [kthreadd]
+      3 ?        S      0:00 [pool_workqueue_release]
+      4 ?        I<     0:00 [kworker/R-rcu_g]
+      5 ?        I<     0:00 [kworker/R-rcu_p]
+      6 ?        I<     0:00 [kworker/R-slub_]
+      7 ?        I<     0:00 [kworker/R-netns]
+      8 ?        I      0:00 [kworker/0:0-cgroup_destroy]
+      9 ?        I      0:00 [kworker/0:1-events]
+     10 ?        I<     0:00 [kworker/0:0H-events_highpri]
+     11 ?        I      0:01 [kworker/u2:0-events_unbound]
+     12 ?        I<     0:00 [kworker/R-mm_pe]
+     13 ?        I      0:00 [rcu_tasks_kthread]
+     14 ?        I      0:00 [rcu_tasks_rude_kthread]
+     15 ?        I      0:00 [rcu_tasks_trace_kthread]
+     16 ?        S      0:00 [ksoftirqd/0]
+     17 ?        I      0:01 [rcu_preempt]
+     18 ?        S      0:00 [migration/0]
+     19 ?        S      0:00 [idle_inject/0]
+     20 ?        S      0:00 [cpuhp/0]
+     21 ?        S      0:00 [kdevtmpfs]
+     22 ?        I<     0:00 [kworker/R-inet_]
+     23 ?        I      0:02 [kworker/u2:1-events_unbound]
+     24 ?        S      0:00 [kauditd]
+     25 ?        S      0:00 [khungtaskd]
+     26 ?        S      0:00 [oom_reaper]
+     27 ?        I      0:00 [kworker/u2:2-events_unbound]
+     28 ?        I<     0:00 [kworker/R-write]
+     29 ?        S      0:00 [kcompactd0]
+     30 ?        SN     0:00 [ksmd]
+     31 ?        SN     0:00 [khugepaged]
+     32 ?        I<     0:00 [kworker/R-kinte]
+     33 ?        I<     0:00 [kworker/R-kbloc]
+     34 ?        I<     0:00 [kworker/R-blkcg]
+     35 ?        S      0:00 [irq/9-acpi]
+     36 ?        I<     0:00 [kworker/R-tpm_d]
+     37 ?        I<     0:00 [kworker/R-ata_s]
+     38 ?        I<     0:00 [kworker/R-md]
+     39 ?        I<     0:00 [kworker/R-md_bi]
+     40 ?        I<     0:00 [kworker/R-edac-]
+     41 ?        I<     0:00 [kworker/R-devfr]
+     42 ?        S      0:00 [watchdogd]
+     43 ?        I<     0:00 [kworker/0:1H-kblockd]
+     44 ?        S      0:00 [kswapd0]
+     45 ?        S      0:00 [ecryptfs-kthread]
+     46 ?        I<     0:00 [kworker/R-kthro]
+     47 ?        I<     0:00 [kworker/R-acpi_]
+     48 ?        S      0:00 [scsi_eh_0]
+     49 ?        I<     0:00 [kworker/R-scsi_]
+     50 ?        S      0:00 [scsi_eh_1]
+     51 ?        I<     0:00 [kworker/R-scsi_]
+     52 ?        I      0:01 [kworker/u2:3-events_unbound]
+     55 ?        I<     0:00 [kworker/R-mld]
+     56 ?        I<     0:00 [kworker/R-ipv6_]
+     63 ?        I<     0:00 [kworker/R-kstrp]
+     65 ?        I<     0:00 [kworker/u3:0-ttm]
+     78 ?        I<     0:00 [kworker/R-charg]
+    125 ?        S      0:00 [scsi_eh_2]
+    126 ?        I<     0:00 [kworker/R-scsi_]
+    178 ?        S      0:00 [jbd2/sda2-8]
+    179 ?        I<     0:00 [kworker/R-ext4-]
+    228 ?        S<s    0:00 /usr/lib/systemd/systemd-journald
+    271 ?        S      0:00 [irq/18-vmwgfx]
+    272 ?        I<     0:00 [kworker/R-ttm]
+    300 ?        Ss     0:00 /usr/lib/systemd/systemd-udevd
+    361 ?        S      0:00 [psimon]
+    377 ?        Ss     0:00 /usr/lib/systemd/systemd-oomd
+    382 ?        Ss     0:00 /usr/lib/systemd/systemd-resolved
+    622 ?        Ss     0:00 avahi-daemon: running [lavs.local]
+    624 ?        Ss     0:00 @dbus-daemon --system --address=systemd: --nofork --nopidf
+    627 ?        Ssl    0:00 /usr/libexec/gnome-remote-desktop-daemon --system
+    631 ?        Ssl    0:00 /usr/lib/polkit-1/polkitd --no-debug
+    640 ?        Ssl    0:00 /usr/libexec/power-profiles-daemon
+    651 ?        Ssl    0:10 /usr/lib/snapd/snapd
+    653 ?        Ssl    0:00 /usr/libexec/accounts-daemon
+    658 ?        Ss     0:00 /usr/sbin/cron -f -P
+    666 ?        Ssl    0:00 /usr/libexec/switcheroo-control
+    671 ?        Ss     0:00 /usr/lib/systemd/systemd-logind
+    672 ?        Ssl    0:00 /usr/libexec/udisks2/udisksd
+    698 ?        Ssl    0:00 /usr/sbin/rsyslogd -n -iNONE
+    713 ?        S      0:00 avahi-daemon: chroot helper
+    716 ?        Ssl    0:00 /usr/sbin/NetworkManager --no-daemon
+    721 ?        Ss     0:00 /usr/sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant 
+    766 ?        Ssl    0:00 /usr/sbin/ModemManager
+    772 ?        I<     0:00 [kworker/R-iprt-]
+    773 ?        I<     0:00 [kworker/R-crypt]
+   1078 ?        Sl     0:00 /usr/bin/VBoxDRMClient
+   1084 ?        Sl     0:00 /usr/sbin/VBoxService --pidfile /var/run/vboxadd-service.s
+   1370 ?        Ss     0:00 /usr/sbin/cupsd -l
+   1377 ?        Ssl    0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended
+   1386 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1388 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1389 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1390 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1393 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1398 ?        Ssl    0:00 /usr/sbin/gdm3
+   1399 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1401 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1402 ?        Ss     0:00 /usr/sbin/kerneloops --test
+   1404 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1406 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1414 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1417 ?        Ssl    0:00 /usr/sbin/cups-browsed
+   1418 ?        Ss     0:00 /usr/sbin/kerneloops
+   1471 ?        SNsl   0:00 /usr/libexec/rtkit-daemon
+   1561 ?        Ssl    0:00 /usr/libexec/colord
+   1617 ?        Ssl    0:00 /usr/libexec/upowerd
+   1886 ?        I<     0:00 [kworker/u3:2-ttm]
+   7255 ?        S      0:00 [psimon]
+   8788 ?        Sl     0:00 gdm-session-worker [pam/gdm-password]
+   8832 ?        Ss     0:00 /usr/lib/systemd/systemd --user
+   8834 ?        S      0:00 (sd-pam)
+   8845 ?        S<sl   0:00 /usr/bin/pipewire
+   8848 ?        Ssl    0:00 /usr/bin/pipewire -c filter-chain.conf
+   8861 ?        S<sl   0:00 /usr/bin/wireplumber
+   8862 ?        S<sl   0:00 /usr/bin/pipewire-pulse
+   8866 ?        SLsl   0:00 /usr/bin/gnome-keyring-daemon --foreground --components=pk
+   8870 ?        Ss     0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork
+   8884 ?        Ssl    0:00 /usr/libexec/xdg-document-portal
+   8907 tty2     Ssl+   0:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SESSION_M
+   8917 tty2     Sl+    0:00 /usr/libexec/gnome-session-binary --session=ubuntu
+   8973 ?        Ssl    0:00 /usr/libexec/xdg-permission-store
+   8989 ?        Ss     0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,
+   9014 ?        Ssl    0:00 /usr/libexec/gcr-ssh-agent --base-dir /run/user/1000/gcr
+   9020 ?        Ssl    0:00 /usr/libexec/gnome-session-ctl --monitor
+   9034 ?        Ssl    0:00 /usr/libexec/gvfsd
+   9046 ?        Sl     0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+   9054 ?        Ssl    0:00 /usr/libexec/gnome-session-binary --systemd-service --sess
+   9090 ?        Sl     0:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
+   9092 ?        Rsl    0:30 /usr/bin/gnome-shell
+   9104 ?        S      0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-
+   9140 ?        Sl     0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+   9155 ?        Sl     0:00 /usr/libexec/gnome-shell-calendar-server
+   9162 ?        Ssl    0:00 /usr/libexec/evolution-source-registry
+   9169 ?        Sl     0:00 /usr/libexec/goa-daemon
+   9177 ?        Ssl    0:00 /usr/libexec/evolution-calendar-factory
+   9193 ?        Sl     0:00 /usr/libexec/goa-identity-service
+   9197 ?        Ssl    0:00 /usr/libexec/evolution-addressbook-factory
+   9211 ?        Sl     0:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Not
+   9213 ?        S      0:00 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -au
+   9219 ?        Ssl    0:01 /usr/bin/ibus-daemon --panel disable
+   9224 ?        Ssl    0:00 /usr/libexec/gsd-a11y-settings
+   9228 ?        Ssl    0:00 /usr/libexec/gsd-color
+   9229 ?        Ssl    0:00 /usr/libexec/gsd-datetime
+   9231 ?        Ssl    0:00 /usr/libexec/gsd-housekeeping
+   9232 ?        Ssl    0:00 /usr/libexec/gsd-keyboard
+   9239 ?        Ssl    0:00 /usr/libexec/gsd-media-keys
+   9240 ?        Ssl    0:00 /usr/libexec/gsd-power
+   9241 ?        Ssl    0:00 /usr/libexec/gsd-print-notifications
+   9246 ?        Ssl    0:00 /usr/libexec/gsd-rfkill
+   9258 ?        Ssl    0:00 /usr/libexec/gsd-screensaver-proxy
+   9265 ?        Ssl    0:00 /usr/libexec/gsd-sharing
+   9267 ?        Ssl    0:00 /usr/libexec/gsd-smartcard
+   9270 ?        Sl     0:00 /usr/libexec/gsd-disk-utility-notify
+   9290 ?        Sl     0:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+   9326 ?        Ssl    0:00 /usr/libexec/gsd-sound
+   9328 ?        Ssl    0:00 /usr/libexec/gsd-wacom
+   9404 ?        Sl     0:00 /usr/libexec/gsd-printer
+   9422 ?        Sl     0:00 /usr/libexec/ibus-dconf
+   9428 ?        Sl     0:01 /usr/libexec/ibus-extension-gtk3
+   9432 ?        Ssl    0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+   9437 ?        Sl     0:00 /usr/libexec/ibus-portal
+   9466 ?        Ssl    0:00 /usr/libexec/gvfs-afc-volume-monitor
+   9472 ?        Ssl    0:00 /usr/libexec/gvfs-mtp-volume-monitor
+   9477 ?        Ssl    0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+   9482 ?        Ssl    0:00 /usr/libexec/gvfs-goa-volume-monitor
+   9487 ?        Ss     0:00 /snap/snapd-desktop-integration/253/usr/bin/snapd-desktop-
+   9537 ?        Sl     0:00 /snap/snapd-desktop-integration/253/usr/bin/snapd-desktop-
+   9539 ?        Sl     0:00 /usr/libexec/ibus-engine-simple
+   9557 ?        Ssl    0:00 /usr/libexec/dconf-service
+   9583 ?        Ssl    0:00 /usr/libexec/gvfsd-metadata
+   9584 ?        Sl     0:00 /usr/libexec/gvfsd-trash --spawner :1.19 /org/gtk/gvfs/exe
+   9617 ?        Ssl    0:00 /usr/libexec/gsd-xsettings
+   9630 ?        Ssl    0:00 /usr/libexec/xdg-desktop-portal
+   9636 ?        Sl     0:00 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/
+   9696 ?        Sl     0:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSav
+   9724 ?        Sl     0:00 /usr/libexec/ibus-x11
+   9726 ?        SNsl   0:00 /usr/libexec/tracker-miner-fs-3
+   9727 ?        Ssl    0:00 /usr/libexec/xdg-desktop-portal-gnome
+   9736 ?        S      0:00 /usr/bin/VBoxClient --clipboard
+   9737 ?        Sl     0:00 /usr/bin/VBoxClient --clipboard
+   9743 ?        Sl     0:00 /usr/libexec/mutter-x11-frames
+   9764 ?        S      0:00 /usr/bin/VBoxClient --vmsvga-session
+   9765 ?        Sl     0:00 /usr/bin/VBoxClient --vmsvga-session
+   9786 ?        Ssl    0:00 /usr/libexec/xdg-desktop-portal-gtk
+   9876 ?        Sl     0:00 /usr/bin/update-notifier
+   9939 ?        Ssl    0:04 /usr/libexec/gnome-terminal-server
+   9947 pts/0    Ss     0:00 bash
+   9973 ?        Ss     0:00 ssh-agent -s
+  10201 ?        I      0:00 [kworker/0:2-cgroup_destroy]
+  10233 ?        I      0:00 [kworker/0:3-cgroup_destroy]
+  10540 ?        I<     0:00 [kworker/u3:1-ttm]
+  10568 pts/0    S+     0:00 script terminal.log
+  10569 pts/1    Ss     0:00 bash -i
+  10593 pts/1    R+     0:00 ps ax
+[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ touch a b c[K[K[K[K[K[K[K[Kch file4 file5 file [K6
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ ls -l
+[?2004ltotal 4
+drwxrwxr-x 2 lavs lavs 4096 Jan 25 23:44 [0m[01;34mdir2[0m
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file4
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file5
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file6
+lrwxrwxrwx 1 lavs lavs   12 Jan 25 23:44 [01;36mques3[0m -> ./dir2/ques3
+[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ ls -l --sort=time
+[?2004ltotal 4
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file4
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file5
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file6
+lrwxrwxrwx 1 lavs lavs   12 Jan 25 23:44 [0m[01;36mques3[0m -> ./dir2/ques3
+drwxrwxr-x 2 lavs lavs 4096 Jan 25 23:44 [01;34mdir2[0m
+[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ ls -l --sort=time >> que s5.txt
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ cat ques5.txt 
+[?2004ltotal 4
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 ques5.txt
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file4
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file5
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file6
+lrwxrwxrwx 1 lavs lavs   12 Jan 25 23:44 ques3 -> ./dir2/ques3
+drwxrwxr-x 2 lavs lavs 4096 Jan 25 23:44 dir2
+[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1[00m$ exit
+[?2004lexit
+
+Script done on 2025-01-25 23:45:36+05:30 [COMMAND_EXIT_CODE="0"]

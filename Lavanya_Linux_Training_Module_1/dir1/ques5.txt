@@ -1,0 +1,7 @@
+total 4
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 ques5.txt
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file4
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file5
+-rw-rw-r-- 1 lavs lavs    0 Jan 25 23:45 file6
+lrwxrwxrwx 1 lavs lavs   12 Jan 25 23:44 ques3 -> ./dir2/ques3
+drwxrwxr-x 2 lavs lavs 4096 Jan 25 23:44 dir2

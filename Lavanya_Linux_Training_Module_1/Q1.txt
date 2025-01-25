@@ -1,0 +1,11 @@
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1$ touch ques1
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1$ chmod a+x ques1
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1$ ls -l
+total 0
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:42 Q1.txt
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:42 Q2.txt
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:42 Q3.txt
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:42 Q4.txt
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:42 Q5.txt
+-rwxrwxr-x 1 lavs lavs 0 Jan 25 23:43 ques1
+-rw-rw-r-- 1 lavs lavs 0 Jan 25 23:43 terminal.log

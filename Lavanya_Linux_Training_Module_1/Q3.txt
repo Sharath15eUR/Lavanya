@@ -1,0 +1,11 @@
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1$ mkdir dir1
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1$ cd dir1/
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1$ mkdir dir2
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1$ cd dir2/
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1/dir2$ echo "q3" > ques3
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1/dir2$ cd ..
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1$ ln -s ./dir2/ques3 ques3
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_1/dir1$ ls -l
+total 4
+drwxrwxr-x 2 lavs lavs 4096 Jan 25 23:44 dir2
+lrwxrwxrwx 1 lavs lavs   12 Jan 25 23:44 ques3 -> ./dir2/ques3
