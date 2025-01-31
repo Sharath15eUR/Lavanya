@@ -1,0 +1,5 @@
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_2/Q3$ grep "ERROR" log.txt | grep -v "DEBUG" > filtered_log.txt
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_2/Q3$ cat filtered_log.txt
+ERROR: Unable to connect to the database.
+ERROR: Failed to fetch data from API endpoint '/users'.
+ERROR: Missing required parameter in the request.

@@ -1,0 +1,7 @@
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_2/Q2$ cat config.txt
+This localhost is an example for using sed's command.
+This localhost is an IP address. 
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_2/Q2$ sed 's/localhost/127.0.0.1/' config.txt > updated_config.txt
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_2/Q2$ cat updated_config.txt
+This 127.0.0.1 is an example for using sed's command.
+This 127.0.0.1 is an IP address.

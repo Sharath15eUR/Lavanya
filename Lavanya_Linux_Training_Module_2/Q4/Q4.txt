@@ -1,0 +1,4 @@
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_2/Q4$ pid=$(ps aux --sort=-%mem | awk 'NR==2 {print $2}')
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_2/Q4$ echo $pid
+2162
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_2/Q4$ kill $pid

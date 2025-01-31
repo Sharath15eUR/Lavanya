@@ -1,0 +1,2 @@
+This localhost is an example for using sed's command.
+This localhost is an IP address. 
