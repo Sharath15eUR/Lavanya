@@ -1,0 +1,42 @@
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_3$ ls
+backup.sh  terminal.log
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_3$ chmod +x backup.sh
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_3$ ls -l
+total 4
+-rwxrwxr-x 1 lavs lavs 1730 Feb  1 18:18 backup.sh
+-rw-rw-r-- 1 lavs lavs    0 Feb  1 20:58 terminal.log
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_3$ ./backup.sh ~/Documents ~/Lavanya_Linux_Training_Module_3/backup.txt
+Usage: ./backup.sh <source_directory> <backup_directory> <file_extension>
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_3$ nano backup.sh
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_3$ ./backup.sh ~/Documents ~/Lavanya_Linux_Training_Module_3/backup.txt
+Give the parameters: ./backup.sh source_director, backup_directory,file_extension
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_3$ cd
+lavs@lavs:~$ cd Documents/
+lavs@lavs:~/Documents$ ls
+file1.txt  file2.txt  file3.txt  file4.txt
+lavs@lavs:~/Documents$ ./backup.sh ~/Documents ~/Lavanya_Linux_Training_Module_3/backup .txt
+bash: ./backup.sh: No such file or directory
+lavs@lavs:~/Documents$ cd work/Lavanya/Lavanya_Linux_Training_Module_3/
+bash: cd: work/Lavanya/Lavanya_Linux_Training_Module_3/: No such file or directory
+lavs@lavs:~/Documents$ cd work/Lavanya/Lavanya_Linux_Training_Module_3
+bash: cd: work/Lavanya/Lavanya_Linux_Training_Module_3: No such file or directory
+lavs@lavs:~/Documents$ cd
+lavs@lavs:~$ cd work/Lavanya/Lavanya_Linux_Training_Module_3
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_3$ ./backup.sh ~/Documents ~/Lavanya_Linux_Training_Module_3/backup .txt
+Backup directory created: /home/lavs/Lavanya_Linux_Training_Module_3/backup
+Backing up files from /home/lavs/Documents to /home/lavs/Lavanya_Linux_Training_Module_3/backup...
+Backing up: /home/lavs/Documents/file1.txt (Size: 11 bytes)
+Backing up: /home/lavs/Documents/file2.txt (Size: 16 bytes)
+Backing up: /home/lavs/Documents/file3.txt (Size: 27 bytes)
+Backing up: /home/lavs/Documents/file4.txt (Size: 25 bytes)
+Backup completed. Generating report...
+Total files processed: 4
+Total size of files backed up: 79 bytes
+Backup directory: /home/lavs/Lavanya_Linux_Training_Module_3/backup
+lavs@lavs:~$ cd Lavanya_Linux_Training_Module_3/
+lavs@lavs:~/Lavanya_Linux_Training_Module_3$ cd backup
+lavs@lavs:~/Lavanya_Linux_Training_Module_3/backup$ cat backup_report.log
+Total files processed: 4
+Total size of files backed up: 79 bytes
+Backup directory: /home/lavs/Lavanya_Linux_Training_Module_3/backup
+
