@@ -1,0 +1,49 @@
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5$ ls
+file_analyzer.sh  terminal.log
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5$ chmod +x file_analyzer.sh
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5$ mkdir test_files
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5$ cd test_files
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5/test_files$ nano file1.txt
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5/test_files$ nano file2.txt
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5/test_files$ nano file3.txt
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5/test_files$ nano file4.txt
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5/test_files$ cd
+lavs@lavs:~$ /work/Lavanya/Lavanya_Linux_Training_Module_5/
+bash: /work/Lavanya/Lavanya_Linux_Training_Module_5/: No such file or directory
+lavs@lavs:~$ cd /work/Lavanya/Lavanya_Linux_Training_Module_5/
+bash: cd: /work/Lavanya/Lavanya_Linux_Training_Module_5/: No such file or directory
+lavs@lavs:~$ cd work/Lavanya/Lavanya_Linux_Training_Module_5/
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5$ ls -l testfiles
+ls: cannot access 'testfiles': No such file or directory
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5$ ls -l test_files
+total 16
+-rw-rw-r-- 1 lavs lavs 12 Feb  2 16:27 file1.txt
+-rw-rw-r-- 1 lavs lavs 15 Feb  2 16:27 file2.txt
+-rw-rw-r-- 1 lavs lavs 31 Feb  2 16:27 file3.txt
+-rw-rw-r-- 1 lavs lavs 25 Feb  2 16:28 file4.txt
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5$ ./file_analyzer.sh -d logs -k error                                             ./file_analyzer.sh -d test_files -k error
+Script name: ./file_analyzer.sh
+Number of arguments: 4
+Arguments passed: -d test_files -k error
+Exit status of the last command: 0
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5$ ./file_analyzer.sh -f script.sh -k TODO                                         ./file_analyzer.sh -f script.sh -k TODO
+Script name: ./file_analyzer.sh
+Number of arguments: 4
+Arguments passed: -f script.sh -k TODO
+Exit status of the last command: 0
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5$ ./file_analyzer.sh --help                                                       ./file_analyzer.sh --help
+Usage: ./file_analyzer.sh [options]
+
+Options:
+  -d <directory>   Directory to search recursively for the keyword.
+  -k <keyword>     Keyword to search for in files.
+  -f <file>        Search for the keyword in a specific file.
+  --help           Display this help message.
+
+Example usage:
+  ./file_analyzer.sh -d logs -k error        # Recursively search for "error" in the "logs" directory.
+  ./file_analyzer.sh -f script.sh -k TODO    # Search for "TODO" in "script.sh" file.
+lavs@lavs:~/work/Lavanya/Lavanya_Linux_Training_Module_5$ exit
+exit
+
+Script done on 2025-02-02 16:34:23+05:30 [COMMAND_EXIT_CODE="1"]
