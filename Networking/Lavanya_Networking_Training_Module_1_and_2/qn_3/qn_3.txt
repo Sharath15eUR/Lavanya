@@ -1,0 +1,53 @@
+Wireshark:
+
+-> Wireshark is a free and open-source network protocol analyzer used for capturing and analyzing network traffic in real time. 
+->Captures data from wired, wireless, and even USB networks.
+-> Supports hundreds of protocols (TCP, UDP, HTTP, DNS, Telnet, etc.).
+->Easily filter traffic using display filters (e.g., tcp.port == 23 for Telnet).
+->View packet details at different layers (Ethernet, IP, TCP/UDP, etc.).
+
+usecase:
+->The interface that i have used for capturing packets is enp0s3.
+
+active filters:
+->ip.src == 10.2.0.15 (filtering based on source ip)
+->ip.dst == 192.162.1.100 (filtering based on destination ip)
+->tcp( to check for protocol)
+->ip.addr == 192.16.0.100 (check based on ip address)
+
+
+
+cisco packet tracer:
+
+-> Cisco Packet Tracer is a network simulation tool designed by Cisco to help users learn, design, and troubleshoot computer networks.
+-> Configure routers, switches etc. in a network.
+-> We can view how packets move through a network.
+-> It allows users to create virtual network topologies.
+
+tcpdump:
+
+lavs@lavs:~/work/Lavanya/Networking/Lavanya_Networking_Training_Module_1_and_2/qn_3$ sudo tcpdump -c 10 -i enp0s3
+[sudo] password for lavs: 
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+
+16:53:17.493758 IP lavs.mdns > mdns.mcast.net.mdns: 0 [2q] PTR (QM)? _ipp._tcp.local. PTR (QM)? _ipps._tcp.local. (45)
+16:53:17.590502 IP lavs.48208 > 10.0.2.3.domain: 17830+ PTR? 251.0.0.224.in-addr.arpa. (42)
+16:53:17.628396 IP 10.0.2.3.domain > lavs.48208: 17830 1/0/0 PTR mdns.mcast.net. (70)
+16:53:17.629125 IP lavs.33517 > 10.0.2.3.domain: 11205+ PTR? 15.2.0.10.in-addr.arpa. (40)
+16:53:17.677075 IP 10.0.2.3.domain > lavs.33517: 11205 NXDomain* 0/1/0 (99)
+16:53:17.690440 IP lavs.42911 > 10.0.2.3.domain: 3810+ PTR? 3.2.0.10.in-addr.arpa. (39)
+16:53:17.701945 IP 10.0.2.3.domain > lavs.42911: 3810 NXDomain* 0/1/0 (98)
+16:53:18.659683 IP6 lavs.mdns > ff02::fb.mdns: 0 [2q] PTR (QM)? _ipps._tcp.local. PTR (QM)? _ipp._tcp.local. (45)
+16:53:18.729593 IP lavs.51850 > 10.0.2.3.domain: 65001+ PTR? b.f.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa. (90)
+16:53:18.747462 IP 10.0.2.3.domain > lavs.51850: 65001 NXDomain 0/1/0 (154)
+10 packets captured
+12 packets received by filter
+0 packets dropped by kernel
+lavs@lavs:~/work/Lavanya/Networking/Lavanya_Networking_Training_Module_1_and_2/qn_3$ sudo tcpdump -c 10 -i enp0s3 -w pckts.pcap
+tcpdump: listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+10 packets captured
+12 packets received by filter
+0 packets dropped by kernel
+
+

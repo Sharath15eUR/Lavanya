@@ -1,0 +1,26 @@
+lavs@lavs:~/work/Lavanya/Networking/Lavanya_Networking_Training_Module_1_and_2/qn_8$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fd00::a00:27ff:fe8c:403b  prefixlen 64  scopeid 0x0<global>
+        inet6 fd00::2c2f:9003:949a:df3a  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::a00:27ff:fe8c:403b  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:8c:40:3b  txqueuelen 1000  (Ethernet)
+        RX packets 91  bytes 15300 (15.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 188  bytes 22821 (22.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 53  bytes 5878 (5.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 53  bytes 5878 (5.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lavs@lavs:~/work/Lavanya/Networking/Lavanya_Networking_Training_Module_1_and_2/qn_8$ iwconfig
+lo        no wireless extensions.
+
+enp0s3    no wireless extensions.
+

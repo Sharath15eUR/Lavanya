@@ -1,0 +1,19 @@
+lavs@lavs:~/work/Lavanya/Networking/backup_directory$ cd
+lavs@lavs:~$ scp -r /home/lavs/work/Lavanya/Networking/Lavanya_Networking_Training_Module_1_and_2/qn_1 lavs@lavs:/home/lavs/work/Lavanya/Networking/backup_directory
+The authenticity of host 'lavs (127.0.1.1)' can't be established.
+ED25519 key fingerprint is SHA256:n6/YzxtfNI7dadHBvntnAarZfir40a7yMsUins0gZxs.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'lavs' (ED25519) to the list of known hosts.
+lavs@lavs's password: 
+file1.txt                                     100%    9     1.2KB/s   00:00    
+file2.txt                                     100%    9     0.8KB/s   00:00    
+lavs@lavs:~$ cd backup_directory
+bash: cd: backup_directory: No such file or directory
+lavs@lavs:~$ cd /home/lavs/work/Lavanya/Networking/backup_directory
+lavs@lavs:~/work/Lavanya/Networking/backup_directory$ cd qn_1
+lavs@lavs:~/work/Lavanya/Networking/backup_directory/qn_1$ ls -l
+total 8
+-rw-rw-r-- 1 lavs lavs 9 Mar 16 12:55 file1.txt
+-rw-rw-r-- 1 lavs lavs 9 Mar 16 12:55 file2.txt
+lavs@lavs:~/work/Lavanya/Networking/backup_directory/qn_1$ 

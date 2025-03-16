@@ -1,0 +1,25 @@
+Secure shell:
+
+
+lavs@lavs:~/work/Lavanya/Networking/Lavanya_Networking_Training_Module_1_and_2/qn_11$ ssh lavs-c@10.0.2.15
+lavs@10.0.2.15's password: 
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-52-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+268 updates can be applied immediately.
+44 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+6 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Tue Mar  4 01:56:17 2025 from 192.168.1.100
+
+TELNET:
+
+lavs@lavs:~/work/Lavanya/Networking/Lavanya_Networking_Training_Module_1_and_2/qn_11$ telnet 10.0.2.15
