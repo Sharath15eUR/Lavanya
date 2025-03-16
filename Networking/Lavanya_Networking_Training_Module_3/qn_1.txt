@@ -1,0 +1,18 @@
+LAN Setup and packet capture :
+
+i) Using Cisco Packet tracer:
+> I have used Cisco packet tracer to setup a small network using a switch 2960 and 3 Laptop's.
+> I have assigned ip's to individual Laptop's starting from 128.63.8.1(Laptop-1) , 128.63.8.2(Laptop-2) ,128.63.8.3(Laptop-3) using the desktop's ip configuration menu.
+> Then I used ping command for pinging the Laptop's to one another.For example, I used ping 128.63.8.2 (Laptop-2) in the Laptop-1's cmd and verified that it doesn't created any traffic issues.
+> After successful verification of all the individual Laptop's ,I moved on to the switch's part.
+> I enabled the switch using the command enable and then used the command # show mac address-table to check the switch's mac address table.
+
+ii)Using GNS3:
+> I tried to connect the wireshark and Cisco packet tracer but I was not able to do that. After searching in various sites, I installed GNS3 for capturing packets.
+> I made a simple network using a switch and 3 Laptop's.
+> I moved on to the console option of Laptop's and used :
+           ip 128.63.8.1/24 (for Laptop1) 
+           ip 128.63.8.2/24 (for Laptop2) 
+           ip 128.63.8.3/24 (for Laptop3)  for manually assigning the ip  statically.
+> Then I right clicked the link between switch and Laptop and chose "start capture" which automatically opened the wireshark applicattion, then I selected the interface as ethernet and started "Capture".
+> On the console of Laptop I used the ping command with ip of another Laptop and observed  the packet transfer from the specified source to destination.
