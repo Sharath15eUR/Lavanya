@@ -1,0 +1,34 @@
+
+ DHCP (Dynamic Host Configuration Protocol)  
+- The `ipconfig /release` and `ipconfig /renew` (on Windows) or `ifconfig down && ifconfig up` (on Linux) commands are used to release an existing IP address and obtain a new one dynamically via DHCP.  
+- DHCP automatically assigns IP addresses, subnet masks, default gateways, and DNS settings to client devices on a network.  
+
+
+ DORA Process (DHCP IP Allocation Steps)  
+The DHCP process consists of four key steps, collectively known as DORA:  
+
+1. Discover (D) – The client sends a DHCP Discover broadcast request to locate an available DHCP server.  
+2. Offer (O) – The DHCP server responds with a DHCP Offer, providing an available IP address and network configuration.  
+3. Request (R) – The client replies with a DHCP Request, confirming it wants to use the offered IP.  
+4. Acknowledge (A) – The DHCP server sends a DHCP Acknowledge, finalizing the lease and assigning the IP to the client.  
+
+
+ Observations  
+
+ Changes in Network Configuration  
+After running `ipconfig /release` and `ipconfig /renew`:  
+
+- IPv4 Address:  
+  - Before: No IPv4 address was initially listed (or used a previously assigned IP).  
+  - After: Changed to `192.168.149.155` (dynamically assigned).  
+
+- Default Gateway:  
+  - Before: Not listed.  
+  - After: Set to `192.168.149.163`.  
+
+- The Wi-Fi interface (Wireless LAN adapter Wi-Fi) was affected by the commands, confirming that DHCP successfully assigned a new IP.  
+
+
+ Packet Capture Using Wireshark  
+- Used the DHCP filter in Wireshark to capture packets associated with DHCP transactions.  
+- Observed the DORA process in action as the client obtained a new IP address from the DHCP server.  

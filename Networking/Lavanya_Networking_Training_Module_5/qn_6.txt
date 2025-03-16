@@ -1,0 +1,26 @@
+Identifying the Class and Default Subnet Mask of Given IP Addresses  
+
+Each IP address belongs to a specific class (A, B, or C) based on its first octet. Below is the classification:  
+
+ IP Address: `10.1.1.1`  
+ First Octet: `10`  
+ Class: A (Range: `1  126`)  
+ Default Subnet Mask: `255.0.0.0`  
+ IP Range for Class A: `1.0.0.0  126.255.255.255`  
+
+
+
+ IP Address: `172.16.5.10`  
+ First Octet: `172`  
+ Class: B (Range: `128  191`)  
+ Default Subnet Mask: `255.255.0.0`  
+ IP Range for Class B: `128.0.0.0  191.255.255.255`  
+
+
+
+ IP Address: `192.168.1.5`  
+ First Octet: `192`  
+ Class: C (Range: `192  223`)  
+ Default Subnet Mask: `255.255.255.0`  
+ IP Range for Class C: `192.0.0.0  223.255.255.255`  
+

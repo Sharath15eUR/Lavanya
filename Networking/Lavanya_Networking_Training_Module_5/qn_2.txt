@@ -1,0 +1,49 @@
+ARP Spoofing
+ARP spoofing is a cyber attack that allows hackers to intercept, modify, or block network communications between devices. By exploiting ARP’s lack of authentication, attackers can deceive devices into sending data to a malicious system instead of the intended destination.  
+
+Experiment Steps: 
+
+1. Network Setup:  
+   - Created a system with two PCs, a switch, and a router.  
+   - Assigned **static IP addresses** to all components.  
+
+2. Assigning a Static IP to the Switch:
+   ```
+   enable  
+   configure terminal  
+   interface vlan 1  
+   ip address 192.168.1.2 255.255.255.0  
+   no shutdown  
+   exit  
+   write memory  
+   ```  
+
+3. Assigning a Static IP to the Router:  
+   ```
+   enable  
+   configure terminal  
+   interface gigabitEthernet 0/1  
+   ip address 192.168.1.1 255.255.255.0  
+   no shutdown  
+   exit  
+   write memory  
+   ```  
+
+4. Performing ARP Spoofing Attack:  
+   - Change the MAC address of the router to match the attacker's PC.  
+   - Ping PC1 to the router to establish communication.  
+   - Check the ARP table using:  
+     ```
+     arp -a
+     ```  
+
+Observations:  
+- Before the attack: Normal packet transfer occurs between the victim PC and the router.  
+- After the attack:  
+  - The router’s MAC address is replaced with the attacker’s MAC in the victim’s ARP table.  
+  - Now, all network traffic intended for the router is redirected to the attacker’s PC.  
+  - The victim PC unknowingly sends data to the attacker instead of the router, making it vulnerable to data theft or malware injection.  
+- Visualizing the Attack:  
+  - The ARP table confirms that the victim is communicating with a malicious system instead of the router.  
+
+

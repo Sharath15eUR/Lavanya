@@ -1,0 +1,66 @@
+Manually Configuring Static IPs on Client Devices  
+
+ What is a Static IP?  
+- A static IP address is a fixed, manually assigned IP that does not change over time.  
+- Unlike a dynamic IP, which is assigned by a DHCP server and may change periodically, a static IP remains constant, providing more stability for certain network applications.  
+
+---
+
+ Steps to Assign a Static IP on Windows:  
+
+1. Open Network Settings:  
+   - Navigate to:  
+     Control Panel → Network and Internet → Network and Sharing Center → Change adapter settings  
+
+2. Select Network Interface:  
+   - From the list of available network interfaces, I selected Wi-Fi as my active connection.  
+
+3. Configure TCP/IPv4 Settings:  
+   - Open Wi-Fi Properties → Internet Protocol Version 4 (TCP/IPv4) Properties  
+   - Manually enter the following values:  
+     ```
+     IP Address: 192.168.1.101  
+     Subnet Mask: 255.255.255.0  
+     Default Gateway: 192.168.1.100  
+     DNS Server: 8.8.8.8  
+     ```  
+
+4. Apply Changes & Verify:  
+   - After saving the changes, I opened Command Prompt (CMD) and ran:  
+     ```
+     ipconfig
+     ```
+   - The output confirmed that the static IP was successfully assigned.  
+
+---
+
+ Testing Network Connectivity  
+
+1. Ping Default Gateway:  
+   - To verify network connectivity, I ran:  
+     ```
+     ping 192.168.1.100
+     ```
+   - The command returned replies, confirming proper packet transmission.  
+
+2. Ping Own IP:  
+   - I tested if the system recognized its own IP:  
+     ```
+     ping 192.168.1.101
+     ```
+   - Received replies with no packet loss, ensuring local network functionality.  
+
+3. Checking Internet & DNS Connectivity:  
+   - Attempted to ping the public Google DNS server:  
+     ```
+     ping 8.8.8.8
+     ```
+   - The request failed, indicating an issue with DNS resolution or external network access.  
+
+
+
+ Difficulties Faced:  
+- Failure to connect to DNS (8.8.8.8) suggested a potential issue with:  
+  - Incorrect gateway configuration.  
+  - Firewall or network restrictions.  
+  - ISP or router settings blocking external DNS access.  

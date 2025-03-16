@@ -1,0 +1,78 @@
+ARP Protocol
+
+Overview:
+
+ARP (Address Resolution Protocol) is a network protocol used to map an IP address to a MAC address (hardware address).
+
+It is primarily used for communication within a local area network (LAN) or Ethernet.
+
+ARP operates at the network layer.
+
+Process:
+
+When a sender device wants to communicate, it first checks its ARP cache for the receiver’s MAC address:
+
+If the MAC address is found in the cache, the sender directly communicates with the receiver.
+
+If not, the sender broadcasts an ARP request containing its own MAC/IP while leaving the receiver’s MAC field blank.
+
+All devices in the LAN receive this request, but only the intended recipient (with the matching IP address) responds with an ARP reply, providing its MAC address.
+
+The sender updates its ARP cache and proceeds with communication.
+
+Steps to Capture ARP Packets:
+
+A simple network was set up with two PCs and an Ethernet switch.
+
+Each PC was assigned static IP addresses: 192.168.1.1/24 and 192.168.1.2/24.
+
+Wireshark was used to capture network packets.
+
+The ping 192.168.1.2 command was executed from PC1 to capture ARP packets.
+
+A filter was applied in Wireshark to display only ARP protocol packets.
+
+ARP Packet Structure:
+
+1. ARP Request Frame:
+
+Sender MAC: MAC address of the device sending the request.
+
+Sender IP: IP address of the sender requesting the MAC address.
+
+Target MAC: Initially set to 00:00:00:00:00:00 (unknown).
+
+Target IP: IP address of the intended recipient.
+
+Broadcast MAC: Sent to FF:FF:FF:FF:FF:FF to reach all devices in the network.
+
+2. ARP Reply Frame:
+
+Sender MAC: MAC address of the responding device.
+
+Sender IP: IP address of the responding device.
+
+Target MAC: MAC address of the original sender.
+
+Target IP: IP address of the sender that made the request.
+
+Unicast MAC: Sent directly to the requester's MAC address.
+
+Observations:
+
+ARP Request:
+
+Sender MAC & IP: PC1 broadcasts, “Who has 192.168.1.2? Tell 192.168.1.1.”
+
+Target MAC: FF:FF:FF:FF:FF:FF (broadcast).
+
+ARP Reply:
+
+Sender MAC & IP: PC2 responds, “192.168.1.2 is at 00:50:79:66:68:01.”
+
+Target MAC: MAC address of PC1.
+
+Packet Type: Unicast (sent directly to PC1).
+
+This process ensures efficient network communication by resolving IP addresses to MAC addresses dynamically.
+
