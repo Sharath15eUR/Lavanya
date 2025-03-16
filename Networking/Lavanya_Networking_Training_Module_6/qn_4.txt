@@ -1,0 +1,36 @@
+
+
+ IP Address Classification & NAT Handling  
+
+ Given IP Addresses  
+
+| IP Address | Class | Private/Public | Description |
+|---------------|----------|------------------|----------------|
+| 192.168.10.5 | Class C | Private | Falls within `192.168.0.0 - 192.168.255.255` (Private IP range) |
+| 172.20.15.1 | Class B | Private | Falls within `172.16.0.0 - 172.31.255.255` (Private IP range) |
+| 8.8.8.8 | Class A | Public | Does not fall in any private range (Public IP, Google DNS) |
+
+---
+
+ How NAT Handles Private IPs for Internet Access  
+
+ Why is NAT Needed?  
+- Private IP addresses are used within local networks and cannot communicate directly with the internet.  
+- Network Address Translation (NAT) enables devices with private IPs to access the internet by translating them into public IPs.  
+
+ NAT Process (Step-by-Step)  
+
+ A device with a private IP (e.g., 192.168.10.5) sends a request to an external website (e.g., 8.8.8.8 - Google DNS).  
+
+The router (configured with NAT) captures the request and replaces the private IP with its own public IP.  
+
+The request is then sent over the internet to the destination (8.8.8.8).  
+
+When the response returns, it reaches the router’s public IP.  
+
+The router translates the public IP back to the original private IP and forwards the response to the correct device.  
+
+ Types of NAT  
+- Static NAT: Maps a private IP to a fixed public IP.  
+- Dynamic NAT: Assigns a public IP from a pool dynamically.  
+- PAT (Port Address Translation): Uses a single public IP and differentiates requests via ports (most common type).  

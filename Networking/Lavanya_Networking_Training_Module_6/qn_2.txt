@@ -1,0 +1,85 @@
+
+
+ Routing in Networks  
+
+ What is Routing?  
+- Routing is the process of determining how data packets travel between different networks and devices.  
+- Routers are responsible for directing traffic across networks to ensure efficient data delivery.  
+- There are two types of routing:  
+  - Static Routing: Manually configured paths for data packets (used in simple networks).  
+  - Dynamic Routing: Uses protocols like RIP, OSPF, or BGP to determine the best path automatically.  
+
+ Static Routing Setup (Using Cisco Packet Tracer)  
+In this scenario, I implemented Static Routing in Cisco Packet Tracer for a simple two-LAN system consisting of:  
+- 2 Routers (Router5 & Router6)  
+- 2 Switches (one for each LAN)  
+- 4 PCs (2 in each LAN)  
+- Copper Crossover Cable to connect the routers  
+
+ Router Configuration  
+
+ Router5 Configuration:  
+```plaintext
+enable
+configure terminal
+interface GigabitEthernet0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+```
+
+ Router6 Configuration:  
+```plaintext
+enable
+configure terminal
+interface GigabitEthernet0/0
+ip address 192.168.2.1 255.255.255.0
+no shutdown
+exit
+```
+
+ Configuring Static Routes  
+Since these two routers are on different networks, we need to manually define the paths between them.  
+
+ Static Route on Router5 (To reach 192.168.2.0/24 via Router6):  
+```plaintext
+ip route 192.168.2.0 255.255.255.0 10.0.0.2
+```
+
+  Static Route on Router6 (To reach 192.168.1.0/24 via Router5):  
+```plaintext
+ip route 192.168.1.0 255.255.255.0 10.0.0.1
+```
+
+ PC Configurations  
+Each PC is assigned an IP address, subnet mask, and default gateway as follows:  
+
+| PC  | IP Address      | Subnet Mask      | Default Gateway  |
+|---------|---------------------|----------------------|----------------------|
+| PC0 | 192.168.1.10        | 255.255.255.0        | 192.168.1.1          |
+| PC1 | 192.168.1.11        | 255.255.255.0        | 192.168.1.1          |
+| PC2 | 192.168.2.10        | 255.255.255.0        | 192.168.2.1          |
+| PC3 | 192.168.2.11        | 255.255.255.0        | 192.168.2.1          |
+
+ Testing Connectivity  
+
+ Ping Test  
+To verify that the routing configuration is working:  
+- I used the ping command from PC0 (System 1) to PC2 (System 2).  
+- Successful replies confirmed that packets were properly forwarded between the networks.  
+
+ Viewing Routing Tables  
+I used the following command on both routers to check their routing tables:  
+```plaintext
+show ip route
+```
+
+ Tracing the Route (tracert command)  
+To observe how packets travel from PC0 to PC2, I used:  
+```plaintext
+tracert 192.168.2.10
+```
+The packet traveled through 3 hops:  
+ `192.168.1.1` → Router5 (Default Gateway for PC0)  
+ `10.0.0.2` → Router6 (Router5 forwards the packet to Router6)  
+ `192.168.2.10` → PC2 (Router6 forwards the packet to its destination)  

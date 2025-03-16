@@ -1,0 +1,47 @@
+Subnetting and Routing in a Network  
+
+ Subnet Division  
+
+ Given Network:  
+- Network Address: `10.0.0.0/24`  
+- Subnet Mask: `255.255.255.0`  
+- Binary Representation: `11111111.11111111.11111111.00000000`  
+- First 24 bits are used for the network, while the last 8 bits are for hosts.  
+
+ Dividing into 4 Equal Subnets  
+- To divide the network into 4 subnets, we need 2 additional bits from the host portion.  
+- This changes the subnet mask to `/26`:  
+  - New Subnet Mask (Binary): `11111111.11111111.11111111.11000000`  
+  - New Subnet Mask (Decimal): `255.255.255.192`  
+- Number of Subnets: `2^2 = 4`  
+- Subnet Size: `2^(32-26) = 2^6 = 64 IPs`  
+- Usable Hosts per Subnet: `64 - 2 = 62` (excluding network and broadcast addresses).  
+
+ Subnet Details  
+
+| Subnet | Network Address | First Host | Last Host | Broadcast Address |
+|------------|---------------------|----------------|---------------|-----------------------|
+| Subnet 1 | `10.0.0.0/26`   | `10.0.0.1`   | `10.0.0.62`   | `10.0.0.63`   |
+| Subnet 2 | `10.0.0.64/26`  | `10.0.0.65`  | `10.0.0.126`  | `10.0.0.127`  |
+| Subnet 3 | `10.0.0.128/26` | `10.0.0.129` | `10.0.0.190`  | `10.0.0.191`  |
+| Subnet 4 | `10.0.0.192/26` | `10.0.0.193` | `10.0.0.254`  | `10.0.0.255`  |
+
+
+ Network Configuration in Cisco Packet Tracer  
+
+ Steps:  
+Created a network topology with:  
+   - 2 Routers  
+   - 4 Switches (one per subnet)  
+   - 8 PCs (two per subnet)  
+
+Configured the routers and set up static routing:  
+   - Router1 → Routes to Subnet 3 & Subnet 4  
+   - Router2 → Routes to Subnet 1 & Subnet 2  
+
+ Tested connectivity:  
+   - Used the ping command from PC0 (Subnet 1) to PC4 (Subnet 3)  
+   - Successful replies confirmed proper communication.  
+
+Verified packet flow using `tracert`:  
+   - Found the path of packet transmission between different subnets.  
