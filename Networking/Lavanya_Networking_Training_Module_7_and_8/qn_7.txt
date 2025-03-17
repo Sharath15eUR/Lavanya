@@ -1,0 +1,105 @@
+
+
+  Setting Up VLANs and VoIP on a Switch in Cisco Packet Tracer  
+
+ Network Setup:
+ Devices: 1 Switch, 2 PCs, 1 IP Phone  
+ VLANs:
+   VLAN 10: Assigned to PC0
+   VLAN 20: Assigned to PC1 and IP Phone  
+
+
+
+ StepbyStep Configuration  
+
+ Create VLANs on the Switch
+```bash
+Switch(config) vlan 10
+Switch(configvlan) name DATA_VLAN
+Switch(configvlan) exit
+
+Switch(config) vlan 20
+Switch(configvlan) name VOICE_VLAN
+Switch(configvlan) exit
+```
+Explanation:  
+ VLAN 10 is for PC0 (DATA VLAN).  
+ VLAN 20 is for PC1 and the IP Phone (VOICE VLAN).  
+
+
+
+ Assign VLANs to Interfaces  
+```bash
+Switch(config) interface FastEthernet0/1
+Switch(configif) switchport mode access
+Switch(configif) switchport access vlan 10
+Switch(configif) exit
+
+Switch(config) interface FastEthernet0/2
+Switch(configif) switchport mode access
+Switch(configif) switchport access vlan 20
+Switch(configif) exit
+```
+ Explanation:  
+ FastEthernet0/1 (PC0) is assigned to VLAN 10.  
+ FastEthernet0/2 (PC1) is assigned to VLAN 20.  
+
+
+
+ Configure the IP Phone Port for VoIP
+```bash
+Switch(config) interface FastEthernet0/3
+Switch(configif) switchport mode access
+Switch(configif) switchport access vlan 20
+Switch(configif) switchport voice vlan 20
+Switch(configif) exit
+```
+ Explanation:  
+ IP Phones need both a DATA VLAN and a VOICE VLAN.  
+ The `switchport voice vlan 20` command ensures proper VoIP traffic handling.  
+
+
+
+  Assign IP Addresses to the PCs
+ PC0 (VLAN 10)
+  ```
+  IP Address: 192.168.10.10  
+  Subnet Mask: 255.255.255.0  
+  Default Gateway: 192.168.10.1  
+  ```
+ PC1 (VLAN 20)
+  ```
+  IP Address: 192.168.20.10  
+  Subnet Mask: 255.255.255.0  
+  Default Gateway: 192.168.20.1  
+  ```
+ IP Phone (VLAN 20)
+  ```
+  IP Address: 192.168.20.20  
+  Subnet Mask: 255.255.255.0  
+  Default Gateway: 192.168.20.1  
+  ```
+IP configuration is done manually on each device.  
+
+
+
+ Enable the IP Phone (Cisco Packet Tracer)
+ Open the IP Phone in Physical Tab.  
+ Drag the "Module Adapter" into the expansion slot.  
+ The phone will turn on and start functioning.  
+
+
+
+ Test Connectivity
+ Open PC0’s Command Prompt and ping PC1:
+  ```bash
+  ping 192.168.20.10
+  ```
+ Open PC0’s Command Prompt and ping IP Phone:
+  ```bash
+  ping 192.168.20.20
+  ```
+Expected Outcome:  
+ Ping between VLAN 10 and VLAN 20 will fail (because VLANs are isolated).  
+ Ping between PC1 and the IP Phone should succeed (as they are in the same VLAN).  
+

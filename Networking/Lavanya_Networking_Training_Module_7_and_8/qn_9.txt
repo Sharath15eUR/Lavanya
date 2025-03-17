@@ -1,0 +1,103 @@
+
+  
+
+  VLAN Configuration on Switch  
+```bash
+Switch(config) vlan 10
+Switch(configvlan) name VLAN10
+Switch(configvlan) exit
+
+Switch(config) vlan 20
+Switch(configvlan) name VLAN20
+Switch(configvlan) exit
+```
+ Verify VLANs:  
+```bash
+Switch show vlan brief
+```
+
+
+
+  Assign Switch Ports to VLANs
+```bash
+Switch(config) interface FastEthernet 0/1
+Switch(configif) switchport mode access
+Switch(configif) switchport access vlan 10
+Switch(configif) exit
+
+Switch(config) interface FastEthernet 0/2
+Switch(configif) switchport mode access
+Switch(configif) switchport access vlan 20
+Switch(configif) exit
+```
+ Check Port Assignments:  
+```bash
+Switch show interfaces switchport
+```
+
+
+
+ Configure Trunk Port Between Switch and Router
+```bash
+Switch(config) interface FastEthernet 0/24
+Switch(configif) switchport mode trunk
+Switch(configif) switchport trunk allowed vlan 10,20
+Switch(configif) exit
+```
+ Verify Trunking:  
+```bash
+Switch show interfaces trunk
+```
+
+
+
+ Configure Router (RouteronaStick)
+```bash
+Router(config) interface GigabitEthernet 0/0.10
+Router(configsubif) encapsulation dot1Q 10
+Router(configsubif) ip address 192.168.10.1 255.255.255.0
+Router(configsubif) exit
+
+Router(config) interface GigabitEthernet 0/0.20
+Router(configsubif) encapsulation dot1Q 20
+Router(configsubif) ip address 192.168.20.1 255.255.255.0
+Router(configsubif) exit
+```
+ Check Router Interfaces:  
+```bash
+Router show ip interface brief
+```
+
+
+
+ Configure PC IP Addresses
+PC0 (VLAN 10)  
+IP Address: `192.168.10.10`  
+Subnet Mask: `255.255.255.0`  
+Default Gateway: `192.168.10.1`  
+
+PC1 (VLAN 20)  
+IP Address: `192.168.20.10`  
+Subnet Mask: `255.255.255.0`  
+Default Gateway: `192.168.20.1`  
+
+ Verify IP Configuration:  
+```bash
+PC0> ipconfig
+PC1> ipconfig
+```
+
+
+
+ Test Connectivity
+ Ping from PC0 (VLAN 10) to PC1 (VLAN 20)  
+```bash
+PC0> ping 192.168.20.10
+```
+ Traceroute to Check Packet Path
+```bash
+PC0> tracert 192.168.20.10
+```
+
+
+

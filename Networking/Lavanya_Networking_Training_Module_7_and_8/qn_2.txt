@@ -1,0 +1,54 @@
+
+
+
+
+
+ DNS, TCP, and UDP Protocols  
+
+ 1. DNS Protocol  
+ The Domain Name System (DNS) translates domain names into IP addresses, allowing web browsers to locate websites.  
+ It plays a crucial role in internet communication by mapping human friendly URLs to machine-readable IPs.  
+
+ Observation Using Wireshark:  
+ I searched for www.google.com, which provided the IP address of the site.  
+ Captured DNS Query Request:  
+  ```
+  Standard query A www.google.com
+  ```
+ Captured DNS Response:  
+  ```
+  142.250.193.138 (IP for www.google.com)
+  ```
+
+
+
+ 2. TCP Protocol  
+ Transmission Control Protocol (TCP) is a connection oriented protocol that ensures reliable data transmission.  
+ It uses a threeway handshake to establish a connection:  
+  1. SYN – Initiates connection  
+  2. SYNACK – Acknowledgment  
+  3. ACK – Connection established  
+ It also closes the connection using a four step handshake: FIN, ACK, FIN, ACK  
+
+ Observation Using Wireshark:  
+ I used ping and tracert commands to capture TCP packets.  
+ Observed source and destination ports:  
+  ```
+  Source Port: 58345  
+  Destination Port: 443 (HTTPS)  
+  Flag: SYN  
+  ```
+ Applied a filter to capture only TCP handshakes:  
+  ```
+  tcp.flags.syn==1 && tcp.flags.ack==0
+  ```
+
+ 3. UDP Protocol  
+ User Datagram Protocol (UDP) is a connectionless, lightweight, and unreliable protocol.  
+ It is typically used for realtime applications like:  
+   VoIP (Voice over IP)  
+   Video conferencing  
+   Streaming services  
+
+ Observation Using Wireshark:  
+ To generate UDP traffic, I used Skype, which produced UDP packets.  

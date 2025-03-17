@@ -1,0 +1,43 @@
+
+
+Troubleshooting Steps  
+
+ Verify Encapsulation Type on the Router
+If using Router on a Stick, ensure the encapsulation type is correct:  
+```bash
+Router(configsubif) encapsulation dot1Q 10
+Router(configsubif) encapsulation dot1Q 20
+```
+
+ Check for IP Address Conflicts
+  
+* Each VLAN has a unique subnet (e.g., 192.168.10.0/24 and 192.168.20.0/24).  
+* No two devices have the same IP address.  
+
+
+
+ Enable IP Routing on a Layer 3 Switch  
+If using a Layer 3 Switch, ensure IP routing is enabled:  
+```bash
+Switch(config) ip routing
+```
+ Final Test & Verification  
+* Check the Routing Table (On the Router or Layer 3 Switch):  
+```bash
+Router show ip route
+Switch show ip route
+```
+* Verify VLANs on the Switch:  
+```bash
+Switch show vlan brief
+```
+* Check if the Trunk is Passing VLANs Properly:  
+```bash
+Switch show interfaces trunk
+```
+* Test with Ping & Traceroute:  
+```bash
+PC0> ping 192.168.20.10
+PC0> tracert 192.168.20.10
+```
+

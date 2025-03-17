@@ -1,0 +1,23 @@
+Traceroute (Tracert) Command in Windows  
+
+ What is Traceroute?  
+ `tracert` (Windows version of traceroute) is a network diagnostic tool used to trace the path packets take from your device to a destination (e.g., `www.google.com`).  
+ It helps in identifying routing issues and checking if packets reach the destination.  
+ It provides a detailed map of the network path, displaying each intermediate router or "hop" along the way.  
+
+
+
+ Common Tracert Commands and Their Uses  
+
+| Command | Description |
+|||
+| `tracert www.google.com` | Runs a basic Tracert to a specified destination (IP or domain). |
+| `tracert d www.google.com` | Disables DNS resolution, showing only IP addresses instead of hostnames. |
+| `tracert h 20 www.google.com` | Limits the maximum number of hops to 20 before stopping. |
+| `tracert w 1000 www.google.com` | Sets a timeout of 1000 ms (default is 4000 ms) for each hop. |
+| `tracert 4 www.google.com` | Forces Tracert to use IPv4 only. |
+| `tracert 6 www.google.com` | Forces Tracert to use IPv6 only. |
+| `tracert l 1500 www.google.com` | Sets the ICMP packet size to 1500 bytes (default is 32 bytes). |
+| `tracert p 80 www.google.com` | Sends the trace using port 80 (useful for HTTP troubleshooting). |
+| `tracert R www.google.com` | Traces the reverse route from the destination back to the source. |
+| `tracert T www.google.com` | Uses TCPbased probes instead of the default ICMP packets (useful for firewalls that block ICMP). |

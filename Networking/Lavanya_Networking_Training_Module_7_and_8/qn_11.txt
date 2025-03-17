@@ -1,0 +1,42 @@
+ Configuring Standard ACL 10
+```bash
+Router(config)# access-list 10 permit 192.168.10.0 0.0.0.255
+Router(config)# access-list 10 deny any
+```
+Explanation:
+✔ Allows only VLAN 10 (192.168.10.x) to access the network**  
+✔ Blocks all other traffic (including VLAN 20 devices)**  
+
+Applying ACL to an Interface
+Since Standard ACLs  filter traffic based on the source IP, they should be applied closest to the destination (outbound).  
+
+Example: Applying ACL 10 inbound on the router interface facing VLAN 10  
+```bash
+Router(config)# interface GigabitEthernet 0/1
+Router(config-if)# ip access-group 10 in
+Router(config-if)# exit
+```
+Check Applied ACL:  
+```bash
+Router# show running-config | include access-group
+```
+Testing ACL Functionality
+✔ Allowed Traffic:
+PC0 (192.168.10.x) → Ping PC1 (192.168.10.y)  
+```bash
+PC0> ping 192.168.10.2
+```
+✔ Success! (Because both are in VLAN 10)  
+
+ Blocked Traffic:
+PC1 (192.168.20.x) → Ping PC0 (192.168.10.x)
+```bash
+PC1> ping 192.168.10.1
+```
+✔ Fails (Request timed out / unreachable) 
+
+PC1 → SSH or Telnet to Server in VLAN 10  
+```bash
+PC1> ssh 192.168.10.100
+```
+✔ Fails (Blocked due to ACL)  

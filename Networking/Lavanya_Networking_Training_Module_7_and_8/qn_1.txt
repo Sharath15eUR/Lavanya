@@ -1,0 +1,24 @@
+Test-Connection & Nslookup Commands  
+
+ 1. Test-Connection  
+- This command is used to check if a website or network destination is reachable.  
+- It works similarly to the ping command but provides more detailed results.  
+
+ Example Usage in PowerShell:  
+```powershell
+Test-Connection www.google.com
+```
+Verification:  
+- I verified the reachability using the tracert command to trace the route to the destination.  
+
+
+ 2. Nslookup  
+- The `nslookup` command retrieves the IP address of a domain name, allowing us to resolve domain names to IPs.  
+
+ Example Usage in PowerShell:  
+```powershell
+nslookup www.google.com
+```
+Verification:  
+- I manually entered the retrieved IP address in the browser (Chrome), and it successfully opened the Google homepage.  
+

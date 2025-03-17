@@ -1,0 +1,52 @@
+
+Defining Extended ACL 101
+```bash
+Router(config)# access-list 101 deny tcp host 192.168.10.10 host 192.168.20.100 eq 80
+Router(config)# access-list 101 deny tcp host 192.168.10.10 host 192.168.20.100 eq 21
+Router(config)# access-list 101 permit ip any any
+```
+Explanation:  
+✔ Blocks HTTP (Port 80) and FTP (Port 21) traffic from `192.168.10.10` (PC) to `192.168.20.100` (Server)  
+✔ Allows all other traffic 
+
+Applying ACL to the Router Interface
+Since Extended ACLs filter based on both source & destination, they should be applied closest to the source (inbound on VLAN 10 interface).  
+
+```bash
+Router(config)# interface GigabitEthernet 0/1.10
+Router(config-if)# ip access-group 101 in
+Router(config-if)# exit
+```
+✔ Ensures that blocked traffic is dropped before reaching the network  
+
+Testing ACL Functionality
+ Blocked Traffic (Expected Behavior)
+PC1 → HTTP Request to Server (192.168.20.100)  
+```bash
+PC1> telnet 192.168.20.100 80
+```
+✔ Connection fails (ACL blocking Port 80)  
+PC1 → FTP Request to Server (192.168.20.100)  
+```bash
+PC1> ftp 192.168.20.100
+```
+✔ Connection fails (ACL blocking Port 21)  
+✔ Allowed Traffic (Unrestricted)
+PC1 → Ping Server (192.168.20.100)  
+```bash
+PC1> ping 192.168.20.100
+```
+✔ Ping successful (ICMP allowed)  
+
+PC1 → SSH to Server (Allowed) 
+```bash
+PC1> ssh 192.168.20.100
+```
+✔ SSH successful (not blocked by ACL) 
+
+Verifying ACL Hits
+To check if the ACL is actively blocking traffic:
+```bash
+Router# show access-lists 101
+```
+✔ Should show hit counts increasing for `deny` statements.

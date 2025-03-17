@@ -1,0 +1,63 @@
+
+ Key Configurations You Implemented  
+
+  Define Extended ACL (ACL 100) on Router  
+```bash
+Router(config) accesslist 100 permit tcp host 192.168.10.10 any eq 80
+Router(config) accesslist 100 deny tcp host 192.168.10.20 any eq 80
+Router(config) accesslist 100 permit ip any any
+```
+ Explanation:  
+✔ PC0 (192.168.10.10) → Allowed to access HTTP (Port 80)  
+✔ PC1 (192.168.10.20) → Denied HTTP (Port 80)  
+✔ All Other Traffic → Allowed  
+
+ Check ACL Configuration:  
+```bash
+Router show accesslists
+```
+
+
+
+ Apply ACL to the Router's Interface  
+Now, you need to apply the ACL to the correct interface in the inbound or outbound direction.  
+
+Example: Applying ACL 100 to the outbound interface facing the web server  
+```bash
+Router(config) interface GigabitEthernet 0/1
+Router(configif) ip accessgroup 100 out
+Router(configif) exit
+```
+ Check Applied ACL:  
+```bash
+Router show runningconfig | include accessgroup
+```
+
+ Testing ACL Functionality  
+
+ PC0 (192.168.10.10) → Web Server (Port 80)  
+```bash
+PC0> curl http://<serverip>  (or open browser)
+```
+✔ Should be successful  
+
+ PC1 (192.168.10.20) → Web Server (Port 80)  
+```bash
+PC1> curl http://<serverip>
+```
+✔ Should be blocked ❌ (Host unreachable or connection refused)  
+
+PC1 → General Ping Test to Server (Allowed)  
+```bash
+PC1> ping <serverip>
+```
+✔ Should be successful  
+
+View ACL Hits (Check if ACL is working properly)  
+```bash
+Router show accesslists 100
+```
+✔ This should show incrementing counters for matched packets.  
+
+
+
