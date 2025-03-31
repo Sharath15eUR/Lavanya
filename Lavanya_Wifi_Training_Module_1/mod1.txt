@@ -1,0 +1,115 @@
+
+1. In which OSI layer does the Wi-Fi standard/protocol fit?
+The OSI (Open Systems Interconnection) model has seven layers, and Wi-Fi primarily operates at:  
+- Layer 1 (Physical Layer): Deals with the actual transmission of radio waves over air. Wi-Fi standards define frequencies, signal strength, and modulation techniques.  
+- Layer 2 (Data Link Layer): Handles MAC (Media Access Control) addresses, authentication, encryption, and frame transmissions. Wi-Fi uses MAC addresses for communication instead of IP addresses at this layer.  
+
+
+2. Share the Wi-Fi devices you use daily and their wireless capabilities. Match them to Wi-Fi generations based on properties. 
+
+1. Smartphone (Samsung Galaxy S23, iPhone 14, OnePlus 11, etc.)  
+   - Wi-Fi Generation: Wi-Fi 6 (802.11ax)  
+   - Frequency Bands: 2.4 GHz & 5 GHz (some support 6 GHz in Wi-Fi 6E)  
+   - Max Speed: 9.6 Gbps (in ideal conditions)  
+   - Special Features: MU-MIMO, OFDMA for improved efficiency in crowded networks  
+
+2. Laptop (MacBook Pro M2, Dell XPS, Lenovo ThinkPad, etc.)  
+   - Wi-Fi Generation: Wi-Fi 5 (802.11ac) or Wi-Fi 6 (802.11ax)  
+   - Frequency Bands: 2.4 GHz & 5 GHz  
+   - Special Features: Dual-band support, beamforming for better signal strength  
+
+3. Smart TV (LG OLED, Samsung Smart TV, Sony Bravia, etc.)  
+   - Wi-Fi Generation: Wi-Fi 5 (802.11ac)  
+   - Frequency Bands: 5 GHz (preferred for streaming)  
+   - Special Features: Supports high-speed streaming and low-latency gaming  
+
+Wi-Fi Generations & Features:
+| Wi-Fi Generation | Standard | Frequency | Max Speed | Features |
+|-----------------|----------|-----------|-----------|----------|
+| Wi-Fi 1 | 802.11 | 2.4 GHz | 2 Mbps | First version of Wi-Fi |
+| Wi-Fi 2 | 802.11b | 2.4 GHz | 11 Mbps | Longer range but slow | Wi-Fi 3 | 802.11g | 2.4 GHz | 54 Mbps | Improved speed over 802.11b |
+| Wi-Fi 4 | 802.11n | 2.4 & 5 GHz | 600 Mbps | MIMO (Multiple Input Multiple Output) |
+| Wi-Fi 5 | 802.11ac | 5 GHz | 6.9 Gbps | Beamforming for better range |
+| Wi-Fi 6 | 802.11ax | 2.4, 5 & 6 GHz | 9.6 Gbps | OFDMA, MU-MIMO, energy efficiency |
+
+3. What is BSS and ESS?  
+- BSS (Basic Service Set):
+  - A single Wi-Fi access point (AP) with connected devices.  
+  - Used in homes, small offices, or classrooms.  
+  - Example: Your home router creates a BSS for your devices.  
+
+- ESS (Extended Service Set):
+  - Multiple APs connected together, forming a larger Wi-Fi network.  
+  - Devices can roam between APs without disconnecting.  
+  - Used in large buildings, universities, or airports.  
+
+4. What are the basic functionalities of a Wi-Fi Access Point (AP)?  
+A Wi-Fi Access Point (AP) is a device that enables wireless communication in a network.  
+- Provides wireless internet access  
+- Converts wired signals into wireless signals 
+- Manages multiple devices using MU-MIMO  
+- Handles authentication (WPA2, WPA3 security protocols)  
+- Extends network range (Used in large networks like airports, malls, or campuses)  
+
+5. Difference between Bridge Mode and Repeater Mode?
+| Feature | Bridge Mode | Repeater Mode |
+|---------|------------|---------------|
+| Function | Connects two different networks | Extends an existing Wi-Fi signal |
+| Network Type | Creates a unified wired/wireless network | Expands coverage of one network |
+| IP Address | Devices retain original IP addresses | May create a new subnet |
+| Example | Ethernet-to-Wi-Fi bridge | Wi-Fi extenders used at home |
+
+6. Differences between 802.11a and 802.11b?
+| Feature  | 802.11a | 802.11b |
+|----------|--------|---------|
+| Frequency | 5 GHz | 2.4 GHz |
+| Max Speed | 54 Mbps | 11 Mbps |
+| Range | Shorter | Longer |
+| Interference | Less (fewer devices on 5 GHz) | More (many devices use 2.4 GHz) |
+
+7. Configure your Wi-Fi on 2.4 GHz and 5 GHz, compare performance.  
+2.4 GHz  
+- Pros: Better range, penetrates walls well  
+- Cons: More interference, slower speeds  
+
+5 GHz  
+- Pros: Faster speeds, less interference  
+- Cons: Shorter range, struggles with obstacles  
+
+8. Difference between IEEE and WFA?  
+- IEEE (Institute of Electrical and Electronics Engineers)
+  - Develops technical Wi-Fi standards (e.g., 802.11ac, 802.11ax).  
+  - Defines how Wi-Fi works at a technical level.  
+
+- WFA (Wi-Fi Alliance) 
+  - Certifies devices to ensure they meet Wi-Fi standards.  
+  - Ensures interoperability across brands (e.g., Wi-Fi CERTIFIED logo).  
+
+
+9. Types of Wi-Fi internet connectivity backhaul (Home/College Wi-Fi).  
+Backhaul refers to how data is transmitted from the main network to local access points.  
+
+| Backhaul Type | Example |
+|--------------|---------|
+| Fiber-optic | College campus, high-speed networks |
+| Ethernet | Office buildings, wired backbone |
+| Cellular (4G/5G) | Mobile hotspots, backup internet |
+| Satellite | Remote areas, research stations |
+
+Your Home/College Wi-Fi Example:
+- Home Wi-Fi: Likely uses fiber or broadband Ethernet backhaul.  
+- College Wi-Fi: Uses fiber backhaul with multiple APs for coverage.  
+
+10. List down Wi-Fi topologies and their use cases.  
+1. Infrastructure Mode (Most common) 
+- Uses a router/AP to manage traffic.  
+- Used in homes, offices, universities.  
+
+2. Ad-hoc Mode (Peer-to-peer Wi-Fi)  
+- Devices connect directly without a router.  
+- Used in file sharing, emergency networks.  
+
+3. Mesh Network (Seamless Coverage)
+- Multiple APs work together to cover large areas.  
+- Used in smart homes, large buildings, outdoor Wi-Fi.  
+
