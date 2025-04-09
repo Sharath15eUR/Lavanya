@@ -1,0 +1,47 @@
+1)Split MAC Architecture and Performance Benefits
+Split MAC architecture divides the MAC layer functionalities between the Access Point (AP) and the Wireless LAN Controller (WLC). Time-sensitive functions such as client association and acknowledgements are handled by the AP , while higher-level functions like QoS, roaming decisions, and security policies are managed by the WLC. This improves performance by offloading complex tasks to a centralized WLC, reduces AP cost and complexity, and allows easier updates and control.
+
+2)CAPWAP Protocol and Flow Between AP and Controller
+CAPWAP (Control and Provisioning of Wireless Access Points) is a protocol that allows communication between (Light weight Access Points) LWAPs and a WLC. The AP discovers the WLC, joins it via the control tunnel, and then establishes a data tunnel. The control tunnel handles management and configuration messages, while the data tunnel transports client data traffic. This architecture centralizes network management and enhances security.
+
+3)CAPWAP in OSI Model and Tunnel Types
+CAPWAP operates at Layer 4 (Transport Layer) using UDP. It uses two tunnels:
+
+Control Tunnel (UDP 5246): Handles configuration, firmware, and management commands.
+
+Data Tunnel (UDP 5247): Carries end-user traffic from AP to WLC.
+This separation ensures secure and organized handling of both types of communication.
+
+4)Lightweight APs vs. Cloud-based APs
+
+Lightweight APs: Depend on an on-site WLC for control and management.
+
+Cloud-based APs: Are managed through a cloud controller over the internet (e.g., Cisco Meraki).
+Cloud-based APs offer better scalability, remote access, and automatic updates, while lightweight APs are more suitable for secure and controlled environments with on-prem management.
+
+5)CAPWAP Tunnel Maintenance
+The CAPWAP tunnel between an AP and WLC is maintained through regular keep-alive messages. These ensure that both devices are reachable and synchronized. If a specified number of keep-alive packets are missed, the tunnel is considered broken, and reconnection procedures are initiated. DTLS may be used for securing the tunnel.
+
+6)Sniffer Mode vs. Monitor Mode
+
+Sniffer Mode: Captures raw 802.11 traffic and sends it to a protocol analyzer (e.g., Wireshark). Used for deep packet inspection and troubleshooting.
+
+Monitor Mode: Used for RF monitoring, detecting rogue APs, interference, and collecting performance metrics. The AP does not serve clients in either mode.
+
+7)Best AP Mode When WLC Is in WAN
+FlexConnect Mode is ideal when the WLC is located remotely (e.g., across a WAN). In this mode, APs can locally switch client data and continue to serve clients even when the WLC is unreachable. It combines centralized control with local survivability.
+
+8)Challenges of Deploying Autonomous APs in Large Networks
+
+-Manual configuration and management overhead
+
+-Inconsistent security and QoS policies
+
+-Difficult firmware updates
+
+-No centralized visibility or troubleshooting tools
+These issues make autonomous APs inefficient for large-scale deployments like universities.
+
+9)Client Behavior if WLC Goes Down (Local Mode)
+In Local Mode, APs rely on the WLC for all operations. If the WLC goes down, APs lose their control connection and stop serving clients after a timeout. This leads to service disruption. Only FlexConnect mode allows continued operation in the event of WLC failure.
+
