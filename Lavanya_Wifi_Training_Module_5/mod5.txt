@@ -1,0 +1,86 @@
+1. Key features of Wi Fi 6, 6E, and 7 vs. Wi Fi 5 (802.11ac)  
+
+    Wi Fi 6 (802.11ax)  : OFDMA, Target Wake Time (TWT), MU MIMO uplink, BSS Coloring.
+    Wi Fi 6E  : Extends Wi Fi 6 into the   6 GHz band   (less interference, more bandwidth).
+    Wi Fi 7 (802.11be)  : Adds   MLO  , 320 MHz channels, 4K QAM, and enhanced latency control.
+    Wi Fi 5 (802.11ac)  : Limited to   5 GHz  , single user MIMO.
+
+   
+
+      2. Role of OFDMA in Wi Fi 6  
+
+    OFDMA   divides a channel into   smaller sub channels (Resource Units)  .
+  Multiple users can transmit simultaneously.
+  Greatly improves   efficiency   in dense environments and reduces latency.
+
+   
+
+      3. Benefits of Target Wake Time (TWT)  
+
+  Allows devices to   negotiate wake/sleep schedules  .
+  Reduces energy usage—ideal for   IoT and battery powered devices  .
+  Enhances overall airtime management and network longevity.
+
+   
+
+      4. Significance of the 6 GHz band in Wi Fi 6E  
+
+  Provides   1200 MHz   of additional spectrum.
+  Less congested than 2.4/5 GHz bands →   lower latency and higher throughput  .
+  Supports   more channels  , reducing overlap/interference.
+
+   
+
+      5. Wi Fi 6 vs. Wi Fi 6E (Range, Bandwidth, Interference)  
+
+| Feature        | Wi Fi 6            | Wi Fi 6E                    |
+|                |                    |                             |
+| Frequency      | 2.4 GHz / 5 GHz     | 6 GHz only                  |
+| Range          | Longer indoors      | Slightly shorter (higher freq) |
+| Bandwidth      | Moderate            | High (due to extra spectrum) |
+| Interference   | Higher              | Low (new band, fewer users)  |
+
+   
+
+      6. Innovations in Wi Fi 7 (802.11be)  
+
+    320 MHz channels   (double bandwidth of Wi Fi 6).
+    Multi Link Operation (MLO)  .
+    4096 QAM   (higher modulation for more data).
+    CMU MIMO   (Coordinated Multi User MIMO).
+  Better AR/VR support with ultra low latency.
+
+   
+
+      7. Multi Link Operation (MLO)  
+
+  Enables simultaneous use of   multiple frequency bands   (2.4/5/6 GHz).
+  Increases   throughput   and provides   failover/redundancy  .
+  Reduces latency by distributing traffic dynamically.
+
+   
+
+      8. Purpose of 802.11k and v (Roaming Aids)  
+
+    802.11k  : Helps clients   discover the best AP   nearby (Neighbor Report).
+    802.11v  : Allows APs to   suggest better APs   to clients (BSS Transition Management).
+  Combined, they enable   smarter roaming decisions  .
+
+   
+
+      9. Fast BSS Transition (802.11r)  
+
+  Allows devices to   roam faster   between APs by   pre authenticating  .
+  Reduces roaming time from hundreds of ms to ~50 ms or less.
+  Ideal for   VoIP and mobile   devices needing continuous connectivity.
+
+   
+
+      10. How 802.11k/v/r work together for enterprise roaming  
+
+    802.11k  : Finds available APs.
+    802.11v  : Recommends which AP to roam to.
+    802.11r  : Enables fast secure transition to that AP.
+  Together, they create   seamless, low latency roaming  , especially important in enterprise or campus networks.
+
+   
