@@ -1,0 +1,70 @@
+ 1. What are the pillars of Wi Fi security?  
+The three key pillars are:
+    Authentication   – Verifies the identity of users/devices.
+    Encryption   – Secures data in transit.
+    Integrity   – Ensures data has not been altered in transit.
+
+   
+
+      2. Authentication vs. Encryption in Wi Fi Security  
+    Authentication  : Validates who is connecting (e.g., password based or certificate based).
+    Encryption  : Protects the actual data being transmitted from eavesdroppers.
+
+   
+
+      3. Differences between WEP, WPA, WPA2, WPA3  
+| Feature | WEP | WPA | WPA2 | WPA3 |
+|        |     |     |      |      |
+| Cipher | RC4 | TKIP | AES (CCMP) | GCMP 256 |
+| Security | Weak | Moderate | Strong | Stronger + Forward Secrecy |
+| Introduced | 1997 | 2003 | 2004 | 2018 |
+| Vulnerabilities | Easily cracked | Better, but flawed | Secure | Most secure today |
+
+   
+
+      4. Why is WEP considered insecure?  
+  Uses static keys and   RC4 encryption  .
+  Weak   initialization vectors (IVs)  .
+  Can be cracked in   minutes   with modern tools.
+
+   
+
+      5. Why was WPA2 introduced?  
+  To replace WPA and WEP due to their vulnerabilities.
+  Introduced   AES based encryption (CCMP)   for robust protection.
+
+   
+
+      6. Role of Pairwise Master Key (PMK) in 4 Way Handshake  
+    PMK   is derived from the pre shared key or 802.1X authentication.
+  Used to create the   Pairwise Transient Key (PTK)  .
+  Foundation for secure encryption of data.
+
+   
+
+      7. How does the 4 way handshake ensure mutual authentication?  
+  Confirms both client and AP   know the PMK  .
+  Exchanges nonces and generates   unique encryption keys  .
+  Prevents man in the middle and replay attacks.
+
+   
+
+      8. What if we put the wrong passphrase during the handshake?  
+  The   PMK generated won’t match  .
+  The handshake fails, and no session is established.
+  Connection is rejected.
+
+   
+
+      9. What problem does 802.1X solve in a network?  
+  Provides   port based network access control  .
+  Allows   centralized authentication   using RADIUS.
+  Ideal for enterprise networks needing   individual credentials  .
+
+   
+
+      10. How does 802.1X enhance Wi Fi security?  
+  Uses   EAP (Extensible Authentication Protocol)   to authenticate users.
+  Prevents unauthorized access.
+  Enables   dynamic key generation  , increasing overall security.
+
