@@ -1,0 +1,109 @@
+      1. What is the significance of MAC layer and in which position it is placed in the OSI model?  
+
+  The   MAC (Media Access Control) layer   is part of the   Data Link Layer (Layer 2)   in the OSI model.
+  It handles   framing, addressing (MAC addresses), access control, and error detection  .
+  In Wi Fi, it coordinates how and when devices access the shared wireless medium to avoid collisions.
+
+   
+
+      2. Describe the frame format of the 802.11 MAC header and explain the purpose of each field.  
+
+The MAC header includes:
+
+    Frame Control  : Type of frame (Management, Control, Data), and flags.
+    Duration/ID  : Time the channel is reserved for transmission.
+    Address Fields   (1 to 4): Used for Source, Destination, BSSID, etc.
+    Sequence Control  : Frame number and fragmentation info.
+    QoS Control (if present)  : Quality of Service data for prioritized traffic.
+    HT Control (optional)  : For high throughput operations (802.11n and above).
+
+   
+
+      3. MAC Layer Functionalities in Management, Control, and Data Planes  
+
+    Management Frames  : Beacon, Probe Request/Response, Association/Disassociation—used for network discovery and joining.
+    Control Frames  : RTS/CTS, ACK, Block ACK—used for reliable delivery.
+    Data Frames  : Carry actual payload between clients and AP.
+
+Each plane serves a specific role in maintaining wireless communication.
+
+   
+
+      4. Explain the scanning process and its types  
+
+  Scanning   helps a device discover available Wi Fi networks.
+
+    Passive Scanning  : Listens for   beacon frames   from APs.
+    Active Scanning  : Sends   probe requests   and listens for   probe responses  .
+
+Used during initial connection, roaming, and quality monitoring.
+
+   
+
+      5. Brief about the client association process  
+
+Steps:
+1.   Scanning   (to discover networks)
+2.   Authentication   (initial security check)
+3.   Association Request   (client asks to join)
+4.   Association Response   (AP allows or denies connection)
+
+After association, client can start data transmission.
+
+   
+
+      6. EAPOL 4 Way Handshake  
+
+Used in   WPA/WPA2/WPA3   security for generating encryption keys:
+
+1. AP sends   ANonce   to client.
+2. Client uses ANonce + PMK to generate   PTK  , then sends   SNonce   to AP.
+3. AP calculates PTK, sends confirmation.
+4. Client installs encryption keys and confirms.
+
+Purpose: Ensure   mutual authentication   and derive   unique session keys  .
+
+   
+
+      7. Power Saving Schemes in MAC Layer  
+
+Techniques include:
+
+    Listen Interval  : Client tells AP how often it wakes up.
+    PS Poll  : Client asks for buffered data from AP.
+    U APSD (Unscheduled Automatic Power Save Delivery)  : Used with QoS.
+    Target Wake Time (Wi Fi 6)  : Allows scheduling of wake up times, saving energy.
+
+Used in mobile and battery operated devices.
+
+   
+
+      8. Medium Access Control (MAC) Methodologies  
+
+Wi Fi uses   CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)  :
+
+1. Device checks if channel is free.
+2. If free, sends data. If busy, waits random backoff time.
+3. Uses   RTS/CTS   or   ACK   for reliability.
+
+Designed to reduce collisions in wireless medium.
+
+   
+
+      9. Block ACK Mechanism  
+
+  Instead of acknowledging every frame individually, devices can acknowledge   a block of frames  .
+  Improves throughput and reduces overhead.
+  Useful in high throughput modes (802.11n/ac/ax).
+
+   
+
+      10. A MSDU, A MPDU, and A MSDU in A MPDU  
+
+Used for   frame aggregation   to increase throughput:
+
+    A MSDU (Aggregated MAC Service Data Unit)  : Multiple MSDUs in one MPDU.
+    A MPDU (Aggregated MAC Protocol Data Unit)  : Multiple MPDUs in one PPDU.
+    A MSDU in A MPDU  : Nesting A MSDUs inside A MPDUs for maximum efficiency.
+
+Aggregation reduces header overhead and increases efficiency.
