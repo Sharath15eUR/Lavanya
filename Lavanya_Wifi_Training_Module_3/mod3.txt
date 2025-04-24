@@ -1,0 +1,114 @@
+      1. What are the different 802.11 PHY layer standards? Compare their characteristics.  
+
+The PHY layer determines how data is physically transmitted over the wireless medium. Key standards:
+
+| Standard   | Frequency | Modulation | Max Speed | Key Feature              |
+|            |           |            |           |                           |
+| 802.11a    | 5 GHz     | OFDM       | 54 Mbps   | Faster, but shorter range |
+| 802.11b    | 2.4 GHz   | DSSS       | 11 Mbps   | First popular Wi Fi       |
+| 802.11g    | 2.4 GHz   | OFDM       | 54 Mbps   | Backward compatible with b |
+| 802.11n    | 2.4/5 GHz | MIMO+OFDM  | 600 Mbps  | Introduced multiple streams |
+| 802.11ac   | 5 GHz     | MU MIMO    | 1+ Gbps   | High throughput, beamforming |
+| 802.11ax   | 2.4/5/6 GHz | OFDMA + MU MIMO | 10 Gbps | Efficient for dense networks |
+
+
+      2. What are DSSS and FHSS? How do they work?  
+
+Both are   spread spectrum techniques   used to reduce interference.
+
+    DSSS (Direct Sequence Spread Spectrum)   spreads the signal across a wide frequency using a pseudo random code. It increases resistance to interference and enables multiple users on the same band.
+  
+    FHSS (Frequency Hopping Spread Spectrum)   changes the carrier frequency rapidly during transmission, reducing the chance of interference.
+   
+
+      3. How do modulation schemes work in the PHY layer?  
+
+Modulation is how digital bits are converted to signals.
+
+    BPSK (1 bit/symbol)  : Very reliable, but slow.
+    QPSK (2 bits/symbol)  : Moderate speed and reliability.
+    16 QAM, 64 QAM, 256 QAM  : Higher speeds by encoding more bits per symbol, but sensitive to noise.
+   
+
+      4. What is the significance of OFDM in WLAN?  
+
+  OFDM (Orthogonal Frequency Division Multiplexing)   splits the signal into multiple subcarriers.
+
+  Reduces interference and   multipath fading  
+  Enables   higher data rates   and efficient channel use
+  Used in 802.11a/g/n/ac/ax
+   
+
+      5. How are frequency bands divided for Wi Fi?  
+
+Wi Fi operates on:
+
+    2.4 GHz band  : 11–14 channels (3 non overlapping), better range
+    5 GHz band  : More non overlapping channels, faster speeds
+    6 GHz band (Wi Fi 6E)  : Ultra high speeds, less interference
+
+Different countries allow different channel ranges (regulated by governments).
+
+
+      6. What is the role of Guard Intervals in WLAN transmission?  
+
+Guard Intervals prevent data symbols from overlapping due to signal reflections (multipath).
+
+    Standard GI  : 800 ns (more protection)
+    Short GI  : 400 ns (less protection, higher throughput)
+
+Short GI increases speed but can lead to errors in noisy environments.
+
+  
+      7. Describe the structure of an 802.11 PHY layer frame.  
+
+The   PPDU (Physical Protocol Data Unit)   includes:
+
+    PLCP Preamble  : For synchronization and channel estimation
+    PLCP Header  : Contains info like data rate and length
+    PSDU (MAC Data)  : Actual payload (user data)
+
+
+      8. Difference between OFDM and OFDMA?  
+
+    OFDM  : Used by one device at a time; high throughput
+    OFDMA  : Multiple users can transmit simultaneously on different subcarriers
+
+OFDMA reduces   latency   and improves efficiency in crowded networks (used in Wi Fi 6).
+
+
+      9. Difference between MIMO and MU MIMO?  
+
+    MIMO (Multiple Input, Multiple Output)  : Uses multiple antennas to increase speed for one device.
+    MU MIMO (Multi User MIMO)  : Serves multiple devices at once.
+
+MU MIMO is ideal for environments with many users (e.g., offices, stadiums).
+
+
+      10. What are PPDU, PLCP, and PMD in the PHY layer?  
+
+    PPDU  : The complete physical frame sent over the air.
+    PLCP  : Converts MAC layer data into a format usable by PHY.
+    PMD  : Handles actual signal modulation and transmission.
+
+  
+      11. What are the types of PPDU?  
+
+Different generations have unique PPDU formats:
+
+    Legacy PPDU  : 802.11a/g
+    HT PPDU  : 802.11n
+    VHT PPDU  : 802.11ac
+    HE PPDU  : 802.11ax   
+
+      12. How is the data rate calculated?  
+
+Data rate= (Nsd*Nbpscs*R*Nss)/(Tdft+Tgi)
+
+Where,
+Nsd-> No. of Data subcarriers
+Nbpscs-> No. of coded bits per subcarrier per stream
+R-> Coding 
+Nss-> No. of spatial streams
+Tdft-> OFDM symbol duration
+Tgi-> Guard interval duration
