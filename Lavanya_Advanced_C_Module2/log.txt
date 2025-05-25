@@ -1,0 +1,36 @@
+Script started on 2025-05-25 17:14:07+05:30 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Advanced_C_Module2[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Advanced_C_Module2[00m$ gcc threads.c -o threads
+[?2004l[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Advanced_C_Module2[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Advanced_C_Module2[00m$ ./threads
+[?2004lEnter value of N: # 3
+Sum of first 3 prime numbers is 10
+Thread 2 running
+Thread 1 running
+Thread 1 running
+Thread 2 running
+Thread 1 running
+Thread 1 running
+Thread 2 running
+Thread 1 running
+Thread 2 running
+Thread 1 running
+Thread 2 running
+Thread 1 running
+Thread 1 running
+Thread 2 running
+Thread 1 running
+Thread 2 running
+Thread 1 running
+Thread 1 running
+Thread 2 running
+Thread 1 running
+Thread 2 running
+Thread 1 running
+Thread 1 running
+Thread 2 running
+Thread 1 running
+^C
+Caught signal 2. Terminating threads safely.
+[?2004h]0;lavs@lavs: ~/work/Lavanya/Lavanya_Advanced_C_Module2[01;32mlavs@lavs[00m:[01;34m~/work/Lavanya/Lavanya_Advanced_C_Module2[00m$ exit
+[?2004lexit
+
+Script done on 2025-05-25 17:15:05+05:30 [COMMAND_EXIT_CODE="0"]
